@@ -1,0 +1,18 @@
+@model ConcesionarioWeb.Models.Vehiculo
+@{
+    ViewData["Title"] = "Detalles";
+}
+<h1>Detalles</h1>
+<hr />
+<dl>
+    <dt>Id</dt><dd>@Model.Id</dd>
+    <dt>Marca</dt><dd>@Model.Marca</dd>
+    <dt>Modelo</dt><dd>@Model.Modelo</dd>
+    <dt>Matrícula</dt><dd>@Model.Matricula</dd>
+    <dt>Año</dt><dd>@Model.Año</dd>
+    <dt>Tipo de Vehículo</dt><dd>@Model.TipoVehiculo.Nombre</dd>
+</dl>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</p>

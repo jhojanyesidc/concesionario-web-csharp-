@@ -1,0 +1,30 @@
+@model ConcesionarioWeb.Models.Conductor
+@{
+    ViewData["Title"] = "Crear";
+}
+<h1>Crear Conductor</h1>
+<hr />
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="TipoLicencia">Tipo de Licencia</label>
+        <input asp-for="TipoLicencia" />
+        <span asp-validation-for="TipoLicencia" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="IdTipoConductor">Tipo de Conductor</label>
+        <select asp-for="IdTipoConductor" asp-items="ViewBag.IdTipoConductor">
+            <option value="">-- Seleccione --</option>
+        </select>
+        <span asp-validation-for="IdTipoConductor" class="text-danger"></span>
+    </div>
+    <button type="submit">Guardar</button>
+    <a asp-action="Index">Volver</a>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,40 @@
+@model ConcesionarioWeb.Models.Vehiculo
+@{
+    ViewData["Title"] = "Crear";
+}
+<h1>Crear Vehículo</h1>
+<hr />
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Marca"></label>
+        <input asp-for="Marca" />
+        <span asp-validation-for="Marca" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Modelo"></label>
+        <input asp-for="Modelo" />
+        <span asp-validation-for="Modelo" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Matricula"></label>
+        <input asp-for="Matricula" />
+        <span asp-validation-for="Matricula" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Año"></label>
+        <input asp-for="Año" type="number" />
+        <span asp-validation-for="Año" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="IdTipoVehiculo">Tipo de Vehículo</label>
+        <select asp-for="IdTipoVehiculo" asp-items="ViewBag.IdTipoVehiculo">
+            <option value="">-- Seleccione --</option>
+        </select>
+        <span asp-validation-for="IdTipoVehiculo" class="text-danger"></span>
+    </div>
+    <button type="submit">Guardar</button>
+    <a asp-action="Index">Volver</a>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

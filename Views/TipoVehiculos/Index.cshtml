@@ -1,0 +1,36 @@
+@model IEnumerable<ConcesionarioWeb.Models.TipoVehiculo>
+@{
+    ViewData["Title"] = "Tipos de Vehículo";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="get" class="mb-2">
+    <input type="text" name="q" value="@(ViewData["q"] as string)" placeholder="Buscar..." />
+    <button type="submit">Buscar</button>
+    <a asp-action="Index">Limpiar</a>
+</form>
+
+<p><a asp-action="Create">Crear nuevo</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nombre</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

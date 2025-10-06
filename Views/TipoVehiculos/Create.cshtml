@@ -1,0 +1,18 @@
+@model ConcesionarioWeb.Models.TipoVehiculo
+@{
+    ViewData["Title"] = "Crear";
+}
+<h1>Crear Tipo de Vehículo</h1>
+<hr />
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <button type="submit">Guardar</button>
+    <a asp-action="Index">Volver</a>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

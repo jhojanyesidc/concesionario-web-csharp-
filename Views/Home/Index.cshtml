@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content fade-in-up">
+                    <h1 class="hero-title">
+                        Bienvenido a <span class="text-warning">AutoMax</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        El concesionario líder en vehículos de calidad. 
+                        Encuentra el auto de tus sueños con la mejor atención y garantía del mercado.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a asp-controller="Vehiculos" asp-action="Index" class="btn btn-warning btn-lg">
+                            <i class="fas fa-car me-2"></i>Ver Vehículos
+                        </a>
+                        <a asp-controller="Vehiculos" asp-action="Create" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-plus me-2"></i>Agregar Vehículo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image">
+                    <i class="fas fa-car-alt" style="font-size: 15rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Estadísticas -->
+<div class="container my-5">
+    <div class="stats-section">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fas fa-car text-primary me-2"></i>150+</span>
+                    <div class="stat-label">Vehículos en Stock</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fas fa-users text-success me-2"></i>500+</span>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fas fa-award text-warning me-2"></i>5</span>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fas fa-handshake text-info me-2"></i>98%</span>
+                    <div class="stat-label">Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Servicios Principales -->
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary-custom">Nuestros Servicios</h2>
+        <p class="lead text-muted">Gestiona tu concesionario de manera eficiente y profesional</p>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Gestión de Vehículos -->
+        <div class="col-lg-3 col-md-6">
+            <div class="feature-card">
+                <i class="fas fa-car feature-icon"></i>
+                <h3 class="feature-title">Gestión de Vehículos</h3>
+                <p class="feature-description">
+                    Administra tu inventario de vehículos con información detallada, 
+                    fotos y especificaciones técnicas.
+                </p>
+                <a asp-controller="Vehiculos" asp-action="Index" class="btn btn-primary">
+                    <i class="fas fa-arrow-right me-1"></i>Ver Vehículos
+                </a>
+            </div>
+        </div>
+
+        <!-- Tipos de Vehículos -->
+        <div class="col-lg-3 col-md-6">
+            <div class="feature-card">
+                <i class="fas fa-tags feature-icon"></i>
+                <h3 class="feature-title">Categorías</h3>
+                <p class="feature-description">
+                    Organiza tus vehículos por tipo: sedán, SUV, deportivo, 
+                    familiar y más categorías personalizadas.
+                </p>
+                <a asp-controller="TipoVehiculos" asp-action="Index" class="btn btn-primary">
+                    <i class="fas fa-arrow-right me-1"></i>Gestionar Tipos
+                </a>
+            </div>
+        </div>
+
+        <!-- Gestión de Conductores -->
+        <div class="col-lg-3 col-md-6">
+            <div class="feature-card">
+                <i class="fas fa-users feature-icon"></i>
+                <h3 class="feature-title">Conductores</h3>
+                <p class="feature-description">
+                    Registra y administra la información de conductores, 
+                    licencias y datos de contacto.
+                </p>
+                <a asp-controller="Conductores" asp-action="Index" class="btn btn-primary">
+                    <i class="fas fa-arrow-right me-1"></i>Ver Conductores
+                </a>
+            </div>
+        </div>
+
+        <!-- Licencias -->
+        <div class="col-lg-3 col-md-6">
+            <div class="feature-card">
+                <i class="fas fa-id-card feature-icon"></i>
+                <h3 class="feature-title">Licencias</h3>
+                <p class="feature-description">
+                    Gestiona los diferentes tipos de licencias de conducir 
+                    y sus categorías correspondientes.
+                </p>
+                <a asp-controller="TipoConductores" asp-action="Index" class="btn btn-primary">
+                    <i class="fas fa-arrow-right me-1"></i>Tipos de Licencia
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Acciones Rápidas -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="bg-gradient-primary text-white p-4 border-radius-custom shadow-custom">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 class="mb-2">
+                            <i class="fas fa-bolt me-2"></i>Acciones Rápidas
+                        </h3>
+                        <p class="mb-0">Accede rápidamente a las funciones más utilizadas del sistema</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <div class="d-flex gap-2 flex-wrap justify-content-md-end">
+                            <a asp-controller="Vehiculos" asp-action="Create" class="btn btn-warning">
+                                <i class="fas fa-plus me-1"></i>Nuevo Vehículo
+                            </a>
+                            <a asp-controller="Conductores" asp-action="Create" class="btn btn-outline-light">
+                                <i class="fas fa-user-plus me-1"></i>Nuevo Conductor
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Información Adicional -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h3 class="mb-4 text-primary-custom">¿Por qué elegir AutoMax?</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                        <h5>Garantía Total</h5>
+                        <p class="text-muted">Todos nuestros vehículos incluyen garantía completa</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-clock fa-3x text-info mb-3"></i>
+                        <h5>Atención 24/7</h5>
+                        <p class="text-muted">Soporte técnico disponible las 24 horas</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-dollar-sign fa-3x text-warning mb-3"></i>
+                        <h5>Mejores Precios</h5>
+                        <p class="text-muted">Precios competitivos y financiamiento disponible</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

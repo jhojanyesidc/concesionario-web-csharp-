@@ -1,0 +1,16 @@
+@model ConcesionarioWeb.Models.TipoVehiculo
+@{
+    ViewData["Title"] = "Eliminar";
+}
+<h1>Eliminar</h1>
+<hr />
+<h3>¿Seguro que deseas eliminar este registro?</h3>
+<dl>
+    <dt>Id</dt><dd>@Model.Id</dd>
+    <dt>Nombre</dt><dd>@Model.Nombre</dd>
+</dl>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Eliminar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>
